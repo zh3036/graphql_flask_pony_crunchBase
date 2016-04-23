@@ -4,3 +4,7 @@
 
 2. familiar with the SQL and datasets
 
+3. Set up flask and graphiql web ide
+
+4. Deciding whether to use pony or change to sql_alchemy, since grahene has built in support
+
