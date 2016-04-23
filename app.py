@@ -8,24 +8,8 @@ app = Flask(__name__)
 app.debug = True
 
 default_query = '''
-{
-  allEmployees {
-    edges {
-      node {
-        id,
-        name,
-        department {
-          id,
-          name
-        },
-        role {
-          id,
-          name
-        }
-      }
-    }
-  }
-}'''.strip()
+
+'''.strip()
 
 GraphQL(app, schema=schema, default_query=default_query)
 
