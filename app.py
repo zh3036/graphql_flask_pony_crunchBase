@@ -8,7 +8,12 @@ app = Flask(__name__)
 app.debug = True
 
 default_query = '''
-
+    query something{
+      patron {
+        id
+        name
+      }
+    }
 '''.strip()
 
 GraphQL(app, schema=schema, default_query=default_query)

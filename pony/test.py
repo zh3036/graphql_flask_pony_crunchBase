@@ -16,7 +16,16 @@ class Car(db.Entity):
 
 
 
-db.bind('mysql', host='', user='root', passwd='zh3036', db='pony_test',create_db=True)
+db.bind('mysql', host='', user='root', passwd='zh3036', db='pony_test')
+
+db.generate_mapping(create_tables=True)
 
 
+with db_session:
+	p1 = Person(name='John', age=20)
+	p2 = Person(name='Mary', age=22)
+	p3 = Person(name='Bob', age=30)
+	c1 = Car(make='Toyota', model='Prius', owner=p2)
+	c2 = Car(make='Ford', model='Explorer', owner=p3)
+	# commit()
 
